@@ -1,0 +1,40 @@
+{
+	"name": "social-dash-react",
+	"version": "0.1.0",
+	"description": "Social Media Dashboard Application",
+	"main": "index.js",
+	"scripts": {
+		"start": "webpack-dev-server .",
+		"build": "webpack .",
+		"test": "test"
+	},
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/cli": "^7.18.9",
+		"@babel/core": "^7.18.9",
+		"@babel/plugin-transform-runtime": "^7.18.9",
+		"@babel/preset-env": "^7.18.9",
+		"@babel/preset-react": "^7.18.6",
+		"@babel/runtime": "^7.18.9",
+		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.2.5",
+		"css-loader": "^6.7.1",
+		"eslint": "^8.20.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-jest": "^26.6.0",
+		"path": "^0.12.7",
+		"sass": "^1.54.0",
+		"sass-loader": "^13.0.2",
+		"scss-loader": "^0.0.1",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.10.0",
+		"webpack-dev-server": "^4.9.3"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.3.0"
+	}
+}
