@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Min Sans';
+	src: url("./../static/fonts/min-sans/MinSans-Regular.woff2") format("woff2");
+}
+
+:root {
+	background-color: #323c52;
+	color: #e9e9e9;
+	margin:0;
+}
+
+.app {
+	display: flex;
+	justify-content:  space-between;
+}
+
+.viewport-center {
+	min-width: 60%;
+	max-width: 80%;
+}
+
+.viewport-left {
+	max-width: 20%;
+	min-width: 10%;
+}
+
+.viewport-right {
+	max-width: 20%;
+	min-width: 10%;
+}
