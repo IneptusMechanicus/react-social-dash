@@ -1,37 +1,16 @@
 import React from "react";
+import {Routes, Route} from "react-router-dom";
 import "./app.scss";
 
-import {Panel} from "./components/panel/panel";
+import {Home} from "./components/home/home";
+import {Dashboard} from "./components/common/dashboard/dashboard";
 
 const App = () =>{
 	return (
-		<div className="app">
-			<div className="viewport-left">
-				<Panel title="Dashboard"
-					mainContent={[
-						"Overview",
-						"Posts",
-						"Analytics",
-						"Connected Accounts",
-						"Account Settings"
-					]}
-				/>
-			</div>
-			<div className="viewport-center">
-
-			</div>
-			<div className="viewport-right">
-				{/* <Panel title="Options"
-					mainContent={[
-						"Overview",
-						"Posts",
-						"Analytics",
-						"Connected Accounts",
-						"Account Settings"
-					]}
-				/> */}
-			</div>
-		</div>
+		<Routes>
+			<Route path="home" element={<Home />} />
+			<Route path="dashboard" element={<Dashboard />} />
+		</Routes>
 	)
 }
 

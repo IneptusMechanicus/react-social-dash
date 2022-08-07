@@ -1,30 +1,78 @@
+@import "./colors.scss";
+@import "./media.scss";
+
 @font-face {
 	font-family: 'Min Sans';
 	src: url("./../static/fonts/min-sans/MinSans-Regular.woff2") format("woff2");
 }
 
+button {
+	background-color: transparent;
+	border-style: none;
+	color: $text-color-main;
+}
+
+li {
+	list-style: none;
+}
+
 :root {
 	background-color: #323c52;
-	color: #e9e9e9;
 	margin:0;
 }
 
 .app {
 	display: flex;
 	justify-content:  space-between;
+	font-family: "Min Sans";
+	color: $text-color-main;
 }
 
-.viewport-center {
+.main {
+	min-width: 80%;
+	max-width: 90%;
+}
+
+.center {
 	min-width: 60%;
 	max-width: 80%;
 }
 
-.viewport-left {
+.left {
 	max-width: 20%;
 	min-width: 10%;
 }
 
-.viewport-right {
+.right {
 	max-width: 20%;
 	min-width: 10%;
+}
+
+.button {
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.primary {
+	background-color: $clr-primary;
+}
+
+.secondary {
+	background-color: $clr-secondary;
+}
+
+.info {
+	background-color: $clr-info;
+}
+
+.warning {
+	background-color: $clr-warning;
+}
+
+.danger {
+	background-color: $clr-danger;
+}
+
+.dark {
+	background-color: $clr-dark;
 }
