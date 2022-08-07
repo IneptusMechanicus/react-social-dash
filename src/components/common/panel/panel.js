@@ -1,18 +1,26 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 import "./panel.scss";
 
 export const Panel = (props) => {
 	return (
 		<div className="panel">
-			<ul className="header">
-				<span className="title">{props.title}</span>
-				<button className="panel-toggle button dark">X</button>
+			<ul className="panel-header">
+				<span className="panel-title">{props.title}</span>
+				<button className="panel-toggle button hover-info">
+					<i className={props.toggleIcon}></i>
+				</button>
 			</ul>
-			<div className="main">
-				{props.main.map(link => <li key={link.title} >{link.title}</li>)}
+			<div className="panel-main">
+				{props.children}
+				{props.items.map(item => 
+					<NavLink className="nav-item hover-info" key={item.title} to={item.path}>
+						<i className={item.icon}></i>{item.title}
+					</NavLink>
+				)}
 			</div>
-			<div className={"footer " + props.footer.class}>
-				{props.footer.content}
+			<div className={"panel-footer " + props.footer.class}>
+				{Array.isArray(props.footer) ? <div></div> : props.footer.content}
 			</div>
 		</div>
 	)

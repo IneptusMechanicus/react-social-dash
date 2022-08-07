@@ -1,9 +1,10 @@
-import {Panel} from "./../common/public/public";
+import React from "react";
+import {Public} from "./../common/public/public";
 
 export const Home = () => {
 	return(
-		<Public>
-			<h1>Hello!</h1>
+		<Public title="Home">
+			<span>asd</span>
 		</Public>
 	)
 }

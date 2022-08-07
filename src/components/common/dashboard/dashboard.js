@@ -1,31 +1,20 @@
+import React from "react";
 import {Panel} from "./../panel/panel";
 
 export const Dashboard = (props) => {
 	return (
-		<div class="app">
-			<div className="left">
+		<div className="viewport-main">
+			<div className="viewport-center">
+				This is the place for dashboard stuff
+			</div>
+			<div className="viewport-side">
 				<Panel title="Dashboard"
-					main={[
-						{"title": "About", "url": "/about"},
-						{"title": "Settings", "url": "/settings"}
+					toggleIcon="fas fa-greater-than"
+					items={[
+						{"title": "Home", "path": "/", "icon": "fas fa-house"},
+						{"title": "Dashboard", "path": "dashboard", "icon": "fas fa-gauge"},
 					]}
-					footer={{
-						"class": "text",
-						"content": "Social Dash \u00A9 No Rights Reserved"
-					}}
-				/>
-			</div>
-			<div className="center">
-
-			</div>
-			<div className="right">
-				<Panel title=""
-					main={[
-						{"title": "About", "url": "/about"},
-						{"title": "Settings", "url": "/settings"}
-					]}
-					footer={{"class": "text"}}
-				/>
+					footer={{"class": "text"}} />
 			</div>
 		</div>
 	)
