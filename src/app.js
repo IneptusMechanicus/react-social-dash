@@ -1,5 +1,5 @@
 import React from "react";
-import {Routes, Route, NavLink} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import "./app.scss";
 
 import {Panel} from "./components/common/panel/panel";
@@ -8,7 +8,7 @@ import {Dashboard} from "./components/common/dashboard/dashboard";
 
 const App = () => {
 	return (
-		<div className="app">
+		<div className="viewport">
 			<div className="viewport-side">
 				<Panel title="Main Menu"
 					toggleIcon="fas fa-greater-than"
@@ -20,7 +20,7 @@ const App = () => {
 			</div>
 			<Routes>
 				<Route index path="/" element={<Home />} />
-				<Route path="dashboard" element={<Dashboard />} />
+				<Route path="dashboard/*" element={<Dashboard />} />
 			</Routes>
 		</div>
 	)

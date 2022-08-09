@@ -6,7 +6,7 @@
 	border-width: 2px 1px 0 1px;
 	border-style: solid;
 	border-radius: 2rem;
-	border-color: $border-color-main;
+	border-color: $clr-info;
 	padding: 1rem;
 	
 	// @media screen and (max-width: medium) {
@@ -41,7 +41,7 @@
 		padding: 0;
 		margin: 0 1rem 0 1rem;
 		border-top: 1px solid;
-		border-color: $border-color-main;
+		border-color: $clr-info;
 	}
 	
 	.nav-item {
@@ -63,6 +63,6 @@
 		padding: 1rem 0 0 0;
 		margin: 0 1rem 0.45rem 1rem;
 		border-top: 1px solid;
-		border-color: $border-color-main;
+		border-color: $clr-info;
 	}
 }
