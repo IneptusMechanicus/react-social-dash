@@ -13,8 +13,8 @@ export const Panel = (props) => {
 			</ul>
 			<div className="panel-main">
 				{props.children}
-				{props.items.map(item => 
-					<NavLink className="nav-item hover-info" key={item.title} to={item.path}>
+				{props.items.map(item =>
+					<NavLink className="nav-item hover-info" activeClassName="info" key={item.title} to={item.path}>
 						<i className={item.icon}></i>{item.title}
 					</NavLink>
 				)}
