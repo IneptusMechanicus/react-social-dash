@@ -19,8 +19,12 @@ export const Panel = (props) => {
 					</NavLink>
 				)}
 			</div>
-			<div className={"panel-footer " + props.footer.class}>
-				{Array.isArray(props.footer) ? <div></div> : props.footer.content}
+			<div className="panel-footer" >
+				{Array.isArray(props.footer) ? props.footer.map(item =>
+					<NavLink className={item.className} key={item.title} to={item.path}>
+						{item.title}
+					</NavLink>
+				) : props.footer.content}
 			</div>
 		</div>
 	)

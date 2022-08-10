@@ -6,6 +6,13 @@
 	src: url("./../static/fonts/min-sans/MinSans-Regular.woff2") format("woff2");
 }
 
+body {
+	background-color: #323c52;
+	margin:0;
+	font-family: "Min Sans";
+	color: $clr-white;
+}
+
 button {
 	background-color: transparent;
 	border-style: none;
@@ -24,18 +31,19 @@ a {
 	}
 }
 
-body {
-	background-color: #323c52;
-	margin:0;
-	font-family: "Min Sans";
-	color: $clr-white;
+hr {
+	border-color: $clr-info;
+}
+
+:root {
+	margin-top: 1rem;
 }
 
 .viewport {
 	display: flex;
 	justify-content:  space-between;
 	flex-direction: row-reverse;
-	margin: 1rem;
+	margin: 0 1rem 0 1rem;
 }
 
 .viewport-main {

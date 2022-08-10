@@ -9,7 +9,7 @@ export const Dashboard = (props) => {
 			<div className="viewport-center">
 				<Routes>
 					<Route path="/" element={<h1>Overview</h1>} />
-					<Route path="dash" element={<h1>Dash Dash</h1>} />
+					<Route path="dash" element={<h1>Posts</h1>} />
 				</Routes>
 			</div>
 			<div className="viewport-side">

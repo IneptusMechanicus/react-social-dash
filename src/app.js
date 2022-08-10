@@ -16,7 +16,11 @@ const App = () => {
 						{"title": "Home", "path": "/", "icon": "fas fa-house"},
 						{"title": "Dashboard", "path": "dashboard", "icon": "fas fa-gauge"},
 					]}
-					footer={{"class": "text", "content": "Footer text"}} />
+					footer={[
+						{"title": "Login", "path": "login", "className": "footer-item hover-primary"},
+						{"title": "Sign Up", "path": "register", "className": "footer-item hover-info"},
+					]}
+				/>
 			</div>
 			<Routes>
 				<Route index path="/" element={<Home />} />
