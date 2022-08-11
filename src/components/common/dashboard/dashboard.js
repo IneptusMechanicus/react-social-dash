@@ -15,6 +15,7 @@ export const Dashboard = (props) => {
 			<div className="viewport-side">
 				<Panel title="Dashboard"
 					toggleIcon="fas fa-greater-than"
+					panelClass="dashboard"
 					items={[
 						{"title": "Overview", "path": "", "icon": "fas fa-eye"},
 						{"title": "Posts", "path": "dash", "icon": "fas fa-newspaper"},

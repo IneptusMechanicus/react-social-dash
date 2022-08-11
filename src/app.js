@@ -12,6 +12,7 @@ const App = () => {
 			<div className="viewport-side">
 				<Panel title="Main Menu"
 					toggleIcon="fas fa-greater-than"
+					panelClass="public"
 					items={[
 						{"title": "Home", "path": "/", "icon": "fas fa-house"},
 						{"title": "Dashboard", "path": "dashboard", "icon": "fas fa-gauge"},

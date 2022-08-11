@@ -3,17 +3,7 @@
 
 .panel {
 	background-color: #2a2f3a;
-	border-width: 2px 1px 0 1px;
-	border-style: solid;
-	border-radius: 2rem;
-	border-color: $clr-info;
 	padding: 1rem;
-	
-	// @media screen and (max-width: medium) {
-	// 	.panel-main {
-	// 		display: none;
-	// 	}
-	// }
 	
 	.panel-header {
 		margin: 0 1rem 1rem 1rem;
@@ -40,8 +30,6 @@
 	.panel-main {
 		padding: 0;
 		margin: 0 1rem 0 1rem;
-		border-top: 1px solid;
-		border-color: $clr-info;
 	}
 
 	.nav-item {
@@ -63,8 +51,6 @@
 		font-style: italic;
 		padding: 1rem 0 0 0;
 		margin: 0 1rem 0 1rem;
-		border-top: 1px solid;
-		border-color: $clr-info;
 	}
 	
 	.footer-item {
@@ -74,5 +60,37 @@
 		margin: auto;
 		border-radius: 10px;
 		transition: 0.2s;
+	}
+}
+
+.public {
+	border-width: 2px 1px 0 1px;
+	border-style: solid;
+	border-radius: 2rem;
+	border-color: $clr-info;
+	
+	.top-separator {
+		border-top: 1px solid;
+		border-color: $clr-info;
+	}
+	
+	.nav-item:hover {
+		background-color: $clr-info
+	}
+}
+
+.dashboard {
+	border-width: 4px 2px 0 2px;
+	border-style: solid;
+	border-radius: 2rem;
+	border-color: $clr-primary;
+	
+	.top-separator {
+		border-top: 2px solid;
+		border-color: $clr-primary;
+	}
+	
+	.nav-item:hover {
+		background-color: $clr-primary
 	}
 }

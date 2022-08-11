@@ -4,22 +4,22 @@ import "./panel.scss";
 
 export const Panel = (props) => {
 	return (
-		<div className="panel">
+		<div className={"panel " + props.panelClass}>
 			<ul className="panel-header">
 				<span className="panel-title">{props.title}</span>
-				<button className="panel-toggle button hover-info">
+				<button className="panel-toggle button hover-dark">
 					<i className={props.toggleIcon}></i>
 				</button>
 			</ul>
-			<div className="panel-main">
+			<div className="panel-main top-separator">
 				{props.children}
 				{props.items.map(item =>
-					<NavLink className="nav-item hover-info" key={item.title} to={item.path}>
+					<NavLink className="nav-item" key={item.title} to={item.path}>
 						<i className={item.icon}></i>{item.title}
 					</NavLink>
 				)}
 			</div>
-			<div className="panel-footer" >
+			<div className="panel-footer top-separator" >
 				{Array.isArray(props.footer) ? props.footer.map(item =>
 					<NavLink className={item.className} key={item.title} to={item.path}>
 						{item.title}
