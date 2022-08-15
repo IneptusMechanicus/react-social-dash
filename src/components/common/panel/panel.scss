@@ -2,7 +2,7 @@
 @import "../../../media.scss";
 
 .panel {
-	background-color: #2a2f3a;
+	background-color: $clr-bg-panel;
 	padding: 1rem;
 	
 	.panel-header {

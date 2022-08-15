@@ -13,8 +13,9 @@ body {
 	color: $clr-white;
 }
 
-button {
-	background-color: transparent;
+button,
+input[type=submit],
+input[type=button] {
 	border-style: none;
 	color: $clr-white;
 }
@@ -63,6 +64,7 @@ hr {
 }
 
 .button {
+	background-color: transparent;
 	padding: 10px;
 	border-radius: 10px;
 	transition: 0.2s;
@@ -115,3 +117,8 @@ hr {
 .hover-dark:hover {
 	background-color: $clr-dark;
 }
+
+.text-normal {
+	font-size: 1rem;
+}
+

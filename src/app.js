@@ -4,6 +4,8 @@ import "./app.scss";
 
 import {Panel} from "./components/common/panel/panel";
 import {Home} from "./components/home/home";
+import {Login} from "./components/login/login";
+import {Register} from "./components/register/register";
 import {Dashboard} from "./components/common/dashboard/dashboard";
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
 			<Routes>
 				<Route index path="/" element={<Home />} />
 				<Route path="dashboard/*" element={<Dashboard />} />
+				<Route path="login" element={<Login />} />
+				<Route path="register" element={<Register />} />
 			</Routes>
 		</div>
 	)
