@@ -1,0 +1,37 @@
+@import "../../../colors.scss";
+@import "../../../media.scss";
+
+.form {
+	display: flex;
+	justify-content: center;
+	
+	.login, .register {
+		margin: auto;
+		background-color: $clr-bg-panel;
+		padding: 1rem;
+	}
+	
+	
+
+	.field {
+		padding: 1rem;
+		margin: auto;
+
+		input {
+			background-color: #24272c;
+			border: 1px solid;
+			padding: 1rem;
+			border-color: $clr-info;
+			border-radius: 15px;
+			font-size: 1rem;
+			color: $clr-white;
+			transition: 0.4s;
+		}
+	}
+	
+	.submit {
+		margin: 0.5rem 1rem 0.5rem 1rem; 
+		display: flex;
+		justify-content: right;
+	}
+}

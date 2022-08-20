@@ -11,6 +11,7 @@ export const Register = () => {
 				<Field type="text" title="First Name" fieldClass="" />
 				<Field type="text" title="Last Name" fieldClass="" />
 				<Field type="password" title="Password" fieldClass="" />
+				<Field type="password" title="Confirm Password" fieldClass="" />
 				<Field type="email" title="Email" fieldClass="" />
 			</Form>
 		</Public>
