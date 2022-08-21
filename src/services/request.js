@@ -7,6 +7,8 @@ const request = async (method, url, params, data) => {
 		if (auth.token) {
 			headers['Authorization'] = "Bearer " + auth.token;
 		}
+		
+		console.log("Params:", data);
 
 		if (Object.keys(params) !== 0) {
 			url += "?" + new URLSearchParams(params).toString();
