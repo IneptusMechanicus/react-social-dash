@@ -3,13 +3,14 @@ import {Routes, Route} from "react-router-dom";
 
 import {Panel} from "./../panel/panel";
 import {Edit} from "./../edit/edit"
+import {PostList} from "./../../post-list/post-list"
 
 export const Dashboard = (props) => {
 	return (
 		<div className="viewport viewport-main">
 			<div className="viewport-center">
 				<Routes>
-					<Route path="posts" element={<h1>Overview</h1>} />
+					<Route path="posts" element={<PostList />} />
 					<Route path="posts/new" element={<Edit />} />
 				</Routes>
 			</div>

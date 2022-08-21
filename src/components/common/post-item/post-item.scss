@@ -65,6 +65,14 @@
 	.status-public {
 		background: $clr-primary;
 	}
+	
+	.status-private {
+		background: $clr-danger;
+	}
+	
+	.status-draft {
+		background: $clr-dark;
+	}
 }
 
 

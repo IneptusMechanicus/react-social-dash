@@ -18,7 +18,7 @@ export const Login = () => {
 		auth.login(username, password).then(result => {
 			if(result.status == 200) {
 				userLogin(result.response);
-				navigate('/dashboard');
+				navigate('/dashboard/posts');
 			} else {
 				setErrorMessage(result.response.message);
 			}

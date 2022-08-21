@@ -1,13 +1,28 @@
 import React from "react";
+import {useState, useEffect, useContext} from "react";
+import {useParams} from "react-router-dom";
 import "./post.scss"
 
+import * as postService from "./../../services/post"
+import {AuthContext} from "./../../contexts/auth"
+
 export const Post = () => {
+	const { post_id } = useParams("post_id");
+	const {user} = useContext(AuthContext);
+	const [postData, setPostData] = useState([]);
+	
+	useEffect(() => {
+			postService.getPost(user.id, post_id).then(result => {
+				setPostData(result.response);
+			});
+	}, []);
+	
 	return (
 		<div className="post">
-			<h1 className="title">Post Mallone</h1>
-			<h3 className="title summary">A post about something</h3>
-			<p className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<span className="author">Ineptus Mechanicus</span>
+			<h1 className="title">{postData.title}</h1>
+			<h3 className="title summary">{postData.summary}</h3>
+			<p className="content">{postData.content}</p>
+			<span className="author">{postData.author}</span>
 		</div>
 	)
 }

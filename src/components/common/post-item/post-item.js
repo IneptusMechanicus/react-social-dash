@@ -1,23 +1,24 @@
+import {NavLink} from "react-router-dom";
 import React from "react";
 import "./post-item.scss"
-export const PostItem = () => {
+export const PostItem = (props) => {
 	return (
 		<div className="post-item">
 			<div className="section main">
 				<div className="title-area">
-					<span className="post-number dark">25</span>
-					<h4 className="title">Example</h4>
+					<span className="post-number dark">{props.post_id}</span>
+					<h4 className="title">{props.title}</h4>
 				</div>
-				<p className="summary">This is an example summary</p>
+				<p className="summary">{props.summary}</p>
 			</div>
 			<div className="section post-info">
 				<div>
-					<span className="status status-public">Public</span>
-					<span className="date">Sun, 21 Aug 2022 01:43:50 GMT</span>
-					<span className="author">Ineptus Mechanicus</span>
+					<span className={"status status-"+props.status}>{props.status}</span>
+					<span className="date">{props.published}</span>
+					<span className="author">{props.author}</span>
 				</div>
 				<div>
-					<a className="details dark hover-primary">View Post</a>
+					<NavLink to={"/post/view/"+props.post_id}className="details dark hover-primary">View Post</NavLink>
 				</div>
 			</div>
 		</div>

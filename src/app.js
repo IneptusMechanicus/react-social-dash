@@ -11,6 +11,7 @@ import {Home} from "./components/home/home";
 import {Login} from "./components/login/login";
 import {Register} from "./components/register/register";
 import {NotFound} from "./components/error/404"
+import {Post} from "./components/post/post"
 import {Dashboard} from "./components/common/dashboard/dashboard";
 // --- Contexts
 import {useAuthContext} from './contexts/auth';
@@ -45,7 +46,7 @@ const App = () => {
 					panelClass="public"
 					items={[
 						{"title": "Home", "path": "/", "icon": "fas fa-house"},
-						{"title": "Dashboard", "path": "dashboard/posts", "icon": "fas fa-gauge"},
+						{"title": "Dashboard", "path": "/dashboard/posts", "icon": "fas fa-gauge"},
 					]}
 					footer={footerContent}
 				/>
@@ -56,6 +57,7 @@ const App = () => {
 				<Route path="/register" element={<Register />} />
 				<Route path="/404" element={<NotFound />} />
 				<Route element={<PrivateRoute />}>
+					<Route path="/post/view/:post_id" element={<Post />} />
 					<Route path="/dashboard/*" element={<Dashboard />} />
 				</Route>
 			</Routes>

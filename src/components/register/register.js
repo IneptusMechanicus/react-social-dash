@@ -24,7 +24,7 @@ export const Register = () => {
 		auth.register(username, email, password, first_name, last_name).then(result => {
 			if(result.status == 200) {
 				userLogin(result.response);
-				navigate('/dashboard');
+				navigate('/dashboard/posts');
 			} else {
 				setErrorMessage(result.response.message);
 			}

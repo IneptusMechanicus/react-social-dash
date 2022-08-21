@@ -3,7 +3,7 @@ import React from "react";
 
 export const Form = (props) => {
 	return (
-		<div className="form">
+		<div className="form" id={props.formId}>
 			<form className={props.formClass} onSubmit={props.onSubmit}>
 				{props.children}
 				<div className="submit">
