@@ -34,8 +34,7 @@ export const Register = () => {
 	}
 	return (
 		<Public title="Create an account">
-			<Form formClass="register" onSubmit={registerHandler}>
-				<span className="error-message">{errorMessage}</span>
+			<Form formClass="register">
 				<div className="form-section">
 					<Field type="text" name="username" title="Username" fieldClass="" />
 					<Field type="email" name="email" title="Email" fieldClass="" />

@@ -45,7 +45,7 @@ const App = () => {
 					panelClass="public"
 					items={[
 						{"title": "Home", "path": "/", "icon": "fas fa-house"},
-						{"title": "Dashboard", "path": "dashboard", "icon": "fas fa-gauge"},
+						{"title": "Dashboard", "path": "dashboard/posts", "icon": "fas fa-gauge"},
 					]}
 					footer={footerContent}
 				/>

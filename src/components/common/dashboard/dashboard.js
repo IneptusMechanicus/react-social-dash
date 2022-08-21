@@ -2,14 +2,15 @@ import React from "react";
 import {Routes, Route} from "react-router-dom";
 
 import {Panel} from "./../panel/panel";
+import {Edit} from "./../edit/edit"
 
 export const Dashboard = (props) => {
 	return (
 		<div className="viewport viewport-main">
 			<div className="viewport-center">
 				<Routes>
-					<Route path="/" element={<h1>Overview</h1>} />
-					<Route path="dash" element={<h1>Posts</h1>} />
+					<Route path="posts" element={<h1>Overview</h1>} />
+					<Route path="posts/new" element={<Edit />} />
 				</Routes>
 			</div>
 			<div className="viewport-side">
@@ -17,8 +18,8 @@ export const Dashboard = (props) => {
 					toggleIcon="fas fa-greater-than"
 					panelClass="dashboard"
 					items={[
-						{"title": "Overview", "path": "", "icon": "fas fa-eye"},
-						{"title": "Posts", "path": "dash", "icon": "fas fa-newspaper"},
+						{"title": "Post List", "path": "posts", "icon": "fas fa-newspaper"},
+						{"title": "New Post", "path": "posts/new", "icon": "fas fa-plus"},
 					]}
 					footer={{
 						"class": "text",
