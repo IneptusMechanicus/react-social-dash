@@ -9,9 +9,12 @@
 		margin: auto;
 		background-color: $clr-bg-panel;
 		padding: 1rem;
+		border-radius: 25px;
 	}
 	
-	
+	.form-section {
+		display: flex;
+	}
 
 	.field {
 		padding: 1rem;
@@ -29,9 +32,16 @@
 		}
 	}
 	
+	.error-message {
+		text-align: center;
+		font-weight: lighter;
+		font-size: 12px;
+		color: $clr-danger;
+	}
+	
 	.submit {
 		margin: 0.5rem 1rem 0.5rem 1rem; 
 		display: flex;
-		justify-content: right;
+		justify-content: center;
 	}
 }

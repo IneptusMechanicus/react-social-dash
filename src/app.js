@@ -9,13 +9,12 @@ import {PrivateRoute} from "./components/common/private-route/private-route";
 // --- "Page" Components
 import {Home} from "./components/home/home";
 import {Login} from "./components/login/login";
-import {Dashboard} from "./components/common/dashboard/dashboard";
+import {Register} from "./components/register/register";
 import {NotFound} from "./components/error/404"
+import {Dashboard} from "./components/common/dashboard/dashboard";
 // --- Contexts
 import {useAuthContext} from './contexts/auth';
 import {useLocalStorage} from "./hooks/local-storage";
-// --- Lazy Load
-const Register = lazy(() => import('./components/register/register'));
 
 
 const App = () => {

@@ -12,7 +12,7 @@ export const Panel = (props) => {
 	const logoutHandler = (e) => {
 		e.preventDefault();
 		
-		auth.logout(user.id).then((data) => {
+		auth.logout(user.id).then(() => {
 			userLogout();
 			navigate('/');
 		}).catch(() => {

@@ -8,30 +8,31 @@ const request = async (method, url, params, data) => {
 			headers['Authorization'] = "Bearer " + auth.token;
 		}
 		
-		console.log(method);
-		
-		if (Object.keys(params) !== 0) {
+		if (Object.keys(params) > 0) {
 			console.log("adding params")
 			url += "?" + new URLSearchParams(params).toString();
 		}
 		
 		let requestStruct = {
-			"method": method,
-			"headers": {
+			method: method,
+			headers: {
 				...headers,
 				'content-type': 'application/json'
-			}
+			},
+			body: JSON.stringify(data)
 		}
 		
-		if(method != "GET")
-			requestStruct["body"] = JSON.stringify(data);
+		if(method == "GET")
+			delete requestStruct.body;
 		
 		let request = fetch(url, requestStruct);	
-
+		
 		const response = await request;
 		const result = await response.json();
-		
-		return result;
+		return {
+			"status": response.status,
+			"response":result
+		};
 	} catch (error) {
 		console.log(error);
 	}
