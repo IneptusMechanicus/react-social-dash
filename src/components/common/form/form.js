@@ -23,6 +23,8 @@ export const Field = (props) => {
 				type={props.type}
 				id={props.id}
 				name={props.name}
+				defaultValue={props.fieldValue}
+				onChange={props.changeHandler}
 				placeholder={props.title}
 			></input>
 			<span className="error-message"></span>

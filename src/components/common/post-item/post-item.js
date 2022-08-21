@@ -18,6 +18,7 @@ export const PostItem = (props) => {
 					<span className="author">{props.author}</span>
 				</div>
 				<div>
+					{(props.owner_id == props.user_id) && <NavLink to={"/dashboard/post/edit/"+props.post_id}className="details info hover-primary">Edit</NavLink>}
 					<NavLink to={"/post/view/"+props.post_id}className="details dark hover-primary">View Post</NavLink>
 				</div>
 			</div>

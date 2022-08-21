@@ -27,6 +27,8 @@ export const PostList = () => {
 					summary={post.summary}
 					status={post.status}
 					published={post.published}
+					user_id={user.id}
+					owner_id={post.owner_id}
 					author={post.author}
 				/>
 			)}

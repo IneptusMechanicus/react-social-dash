@@ -1,5 +1,5 @@
 import React from "react";
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, useParams} from "react-router-dom";
 
 import {Panel} from "./../panel/panel";
 import {Edit} from "./../edit/edit"
@@ -11,7 +11,8 @@ export const Dashboard = (props) => {
 			<div className="viewport-center">
 				<Routes>
 					<Route path="posts" element={<PostList />} />
-					<Route path="posts/new" element={<Edit />} />
+					<Route path="post/new" element={<Edit mode="new"/>} />
+					<Route path="post/edit/:post_id" element={<Edit mode="edit"/>} />
 				</Routes>
 			</div>
 			<div className="viewport-side">
@@ -20,7 +21,7 @@ export const Dashboard = (props) => {
 					panelClass="dashboard"
 					items={[
 						{"title": "Post List", "path": "posts", "icon": "fas fa-newspaper"},
-						{"title": "New Post", "path": "posts/new", "icon": "fas fa-plus"},
+						{"title": "New Post", "path": "post/new", "icon": "fas fa-plus"},
 					]}
 					footer={{
 						"class": "text",
